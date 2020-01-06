@@ -1,6 +1,6 @@
-#Azurerm_modules
+# Azurerm_modules
  
-##Introduction
+## Introduction
 
 Azurerm_modules is a repository of terraform modules for Azure with documentation and an example of how to call each.
 
@@ -10,7 +10,7 @@ This has a few added advantages when it comes to cutting down on code duplicatio
 By and large the module in this repository should only deploy a single resource. Exceptions can be made for resources that have a bi-directional 1-1 exclusive relationship 
 (ie. Neither resource can be considered functional without the other) or null resources used to contain scripts for configuration options not availiable in terraform 
 
-##Structure
+## Structure
 
 Each module in this repository should be made up of four files.
 1. main.tf : Defines the HCL that will actually deploy the module eg.
@@ -58,7 +58,7 @@ module "sql_db" {
  Provides an example of how to use the module and a breakdown of ever variable that can be configured for the module. 
  See the [SQL Server README](/modules/sql_server/README.md) for a good example 
 
-##Adding A Module
+## Adding A Module
 
 This project follows a [GitHub flow](https://guides.github.com/introduction/flow/) model 
 When adding a module to this repo one of the following structures should be observed.
