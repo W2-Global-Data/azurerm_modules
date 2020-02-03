@@ -10,7 +10,7 @@ variable "resource_group_name"{
 
 variable "location" {
   description = "Azure region for the service to be located in."
-  default     = "Service_location"
+  default     = "West Europe"
 }
 
 variable "server_name" {
