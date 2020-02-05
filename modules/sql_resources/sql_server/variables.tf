@@ -13,17 +13,17 @@ variable "location" {
   default = "West Europe"
 }
 
-variable "version" {
+variable "sql_server_version" {
   description = "Version of SQL server to be created"
   default     = "12.0"
 }
 
 variable "admin_login" {
   description = "Username of the admin user for the created server. Should be passed in through VSTS"
-  default = "admin"
+  default = ""
 }
 
 variable "admin_password" {
   description = "Password of the admin user for the created server."
-  default = "server_password"
+  default = "server_Pa$$w0rd0"
 }
