@@ -1,5 +1,5 @@
 variable "backend" {
-  type = "map"
+  type = map(string)
 
   default = {
     access_key = ""
@@ -10,7 +10,7 @@ variable "backend" {
 }
 
 variable "certificate" {
-  type = "map"
+  type = map(string)
 
   default = {
     certificate_file_name = ""
@@ -22,7 +22,7 @@ variable "certificate" {
 }
 
 variable "connection" {
-  type = "map"
+  type = map(string)
 
   default = {
     client_id       = ""
