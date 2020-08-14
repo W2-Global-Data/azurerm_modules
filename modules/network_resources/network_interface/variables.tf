@@ -24,6 +24,11 @@ variable "private_ip_address_allocation" {
   default = "Dynamic"
 }
 
+variable "public_ip_address_id" {
+  description = "Reference to a Public IP Address to associate with this NIC"
+  default = ""
+}
+
 variable "tags" {
   type = map
   description = "A mapping of tags to assign to the resource"
