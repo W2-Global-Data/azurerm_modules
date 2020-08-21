@@ -9,4 +9,9 @@ resource "azurerm_network_security_group" "nsg" {
             "built_time", timestamp(),
         ), var.tags)
   }
+    lifecycle {
+    ignore_changes = [
+      tags.built_time
+    ]
+  }
 }

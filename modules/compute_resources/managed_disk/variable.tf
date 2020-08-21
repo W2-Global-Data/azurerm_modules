@@ -3,7 +3,7 @@ variable "name" {
   default     = "test-managed-disk"
 }
 
-variable "resource_group" {
+variable "resource_group_name" {
   description = "The name of the resource group in which to create the Windows Virtual Machine"
   default     = "rg-virt-machine"
 }
@@ -28,9 +28,8 @@ variable "disk_size_gb" {
   default = "1023"
 }
 
-
 variable "tags" {
-  type = map
+  type = map(string)
   description = "A mapping of tags to assign to the resource"
   default = {
   }

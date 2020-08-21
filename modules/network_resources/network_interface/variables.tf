@@ -3,7 +3,7 @@ variable "nic_name" {
   default     = "test-nic"
 }
 
-variable "resource_group" {
+variable "resource_group_name" {
   description = "The name of the resource group in which to create the Windows Virtual Machine"
   default     = "rg-virt-machine"
 }
@@ -26,6 +26,11 @@ variable "private_ip_address_allocation" {
 
 variable "public_ip_address_id" {
   description = "Reference to a Public IP Address to associate with this NIC"
+  default = ""
+}
+
+variable "subnet_id" {
+  description = "The ID of the Subnet where this Network Interface should be located in."
   default = ""
 }
 

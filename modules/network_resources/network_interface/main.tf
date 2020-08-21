@@ -7,12 +7,11 @@ resource "azurerm_network_interface" "nic" {
     name                          = var.ip_config_name
     private_ip_address_allocation = var.private_ip_address_allocation
     public_ip_address_id          = var.public_ip_address_id
+    subnet_id                     = var.subnet_id
   }
 
   tags = {
-    tags = merge(map(
-            "built_by", "Terraform",
-            "built_time", timestamp(),
-        ), var.tags)
+    "built_by"= "Terraform"
+    "built_time"= timestamp()
   }
 }

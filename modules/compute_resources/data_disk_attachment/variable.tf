@@ -13,7 +13,7 @@ variable "lun" {
   default = ""
 }
 
-variable "managed_disk_id" {
-  description = "The ID of the Virtual Machine to which the Data Disk should be attached. Changing this forces a new resource to be created."
+variable "caching" {
+  description = "Specifies the caching requirements for this Data Disk. Possible values include None, ReadOnly and ReadWrite"
   default = ""
 }
