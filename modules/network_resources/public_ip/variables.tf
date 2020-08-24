@@ -3,7 +3,7 @@ variable "ip_name" {
   default     = "pipTest"
 }
 
-variable "resource_group" {
+variable "resource_group_name" {
   description = "The name of the resource group in which to create the Windows Virtual Machine"
   default     = "rg-virt-machine"
 }
@@ -21,6 +21,5 @@ variable "allocation_method" {
 variable "tags" {
   type = map
   description = "A mapping of tags to assign to the resource"
-  default = {
-  }
+  default = {}
 }

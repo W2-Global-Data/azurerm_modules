@@ -21,9 +21,12 @@ resource "azurerm_windows_virtual_machine" "windows_vm" {
   }
   
   tags = {
-    tags = merge(map(
-            "built_by", "Terraform",
-            "built_time", timestamp(),
-        ), var.tags)
+    "built_by"= "Terraform",
+    "built_time"= timestamp()
+  }
+  lifecycle {
+    ignore_changes = [
+      tags.built_time
+    ]
   }
 }

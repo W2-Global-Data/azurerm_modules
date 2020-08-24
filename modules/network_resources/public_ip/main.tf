@@ -5,9 +5,13 @@ resource "azurerm_public_ip" "pip" {
   allocation_method     = var.allocation_method
 
   tags = {
-    tags = merge(map(
-            "built_by", "Terraform",
-            "built_time", timestamp(),
-        ), var.tags)
+    "built_by"= "Terraform",
+    "built_time"= tostring(timestamp()),
+  }
+
+  lifecycle {
+    ignore_changes = [
+      tags.built_time
+    ]
   }
 }

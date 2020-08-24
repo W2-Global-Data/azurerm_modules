@@ -4,9 +4,12 @@ resource "azurerm_network_security_group" "nsg" {
   location              = var.location
 
   tags = {
-    tags = merge(map(
-            "built_by", "Terraform",
-            "built_time", timestamp(),
-        ), var.tags)
+    "built_by"= "Terraform",
+    "built_time"= tostring(timestamp()),
+  }
+    lifecycle {
+    ignore_changes = [
+      tags.built_time
+    ]
   }
 }

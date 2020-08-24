@@ -43,7 +43,7 @@ variable "destination_address_prefix" {
   default     = "*"
 }
 
-variable "resource_group" {
+variable "resource_group_name" {
   description = "The name of the resource group in which to create the network rule"
   default     = "rg-network-security"
 }
